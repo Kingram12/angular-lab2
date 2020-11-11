@@ -1,0 +1,15 @@
+<main class="main-content">
+  <button (click)="toggleDisplay()">New Thought</button>
+  <form
+    class="form"
+    *ngIf="shown"
+    #thoughtsForm="ngForm"
+    (ngSubmit)="submitPost(thoughtsForm)"
+  >
+    <label for="title">New Title</label>
+    <input type="text" name="title" id="title" ngModel />
+    <label for="thought">New Thought</label>
+    <input type="text" name="thought" id="thought" ngModel />
+    <button>Submit</button>
+  </form>
+</main>
